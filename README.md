@@ -25,6 +25,12 @@ Rules here should be 1) actionable and 2) clearly testable in a PR review.
     standardizing our code, and keeps this guide focused on high-level patterns
     and things we can't programmatically capture.
 
+## Package Manager
+
+Use `npm` unless there is a specific reason to use `yarn` instead. If `npm` is
+not being used, make note in the README as to which package manager to use and
+why.
+
 ## Automatic Styling
 
 - Use prettier with the configuration from @twostoryrobot/prettier-config
