@@ -279,10 +279,10 @@ Query {
 
 - Use separate repositories for frontend and backend applications.
   - e.g.: repo-web, repo-mobile, and repo-api
-- Projects should follow Git flow, and have both a **master** and **dev**
+- Projects should follow Git flow, and have both a **main** and **dev**
   branch.
-  - Open source apps or small projects can use a single **master** branch.
-- Both **dev** and **master** should be protected branches.
+  - Open source apps or small projects can use a single **main** branch.
+- Both **dev** and **main** should be protected branches.
   - Status checks must pass before merging.
   - Require branches are up-to-date.
 
