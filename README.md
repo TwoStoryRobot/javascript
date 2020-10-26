@@ -179,7 +179,7 @@ export const API_KEY = 'SOMEKEY'
 // bad
 
 // This is a very long comment that continues on and goes over multiple lines, 
-// saying something very long and details which all developers will appreciate 
+// saying something very long and detailed which all developers will appreciate 
 // reading and thinking about.
 
 /* This is just a single line comment. */
@@ -187,7 +187,7 @@ export const API_KEY = 'SOMEKEY'
 // good
 
 /* This is a very long comment that continues on and goes over multiple lines, 
- * saying something very long and details which all developers will appreciate 
+ * saying something very long and detailed which all developers will appreciate 
  * reading and thinking about. */
 
 // This is just a single line comment.
