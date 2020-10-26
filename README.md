@@ -46,7 +46,7 @@ why.
 - Use a line length of 80 characters.
 - Use camelCase when naming objects, functions, and instances.
 
-```jsx
+```javascript
 // bad
 const UsTaxes = 1000
 const playerID = 10
@@ -63,7 +63,7 @@ function getUnescoProperties() {}
 
 - Use PascalCase when naming constructors, classes, and components.
 
-```jsx
+```javascript
 // bad
 const myContainer = styled.div`
   color: blue;
@@ -77,7 +77,7 @@ const MyContainer = styled.div`
 
 - Group your shorthand properties at the end of your object declaration.
 
-```jsx
+```javascript
 const anakinSkywalker = 'Anakin Skywalker'
 const lukeSkywalker = 'Luke Skywalker'
 
@@ -107,7 +107,7 @@ const obj = {
   - An exception to this is arrow functions, which must be assigned to
     variables.
 
-```jsx
+```javascript
 // bad
 const foo = function() {
   // ...
@@ -121,7 +121,7 @@ function foo() {
 
 - Never declare functions inside blocks. This might work but is invalid JS.
 
-```jsx
+```javascript
 // bad
 if (currentUser) {
   function test() {
@@ -140,7 +140,7 @@ if (currentUser) {
 
 - Always put default parameters last.
 
-```jsx
+```javascript
 // bad
 function handleThings(opts = {}, name) {
   // ...
@@ -159,7 +159,7 @@ function handleThings(name, opts = {}) {
     UPPERCASE_VARIABLES are letting the programmer know that they can trust
     the variable (and its properties) not to change.
 
-```jsx
+```javascript
 // bad
 export const THING_TO_BE_CHANGED = 'should obviously not be uppercased'
 
@@ -204,7 +204,7 @@ export const API_KEY = 'SOMEKEY'
 - Use the `.stories.js` and `test.js` extensions for stories and tests where
   applicable.
 
-```jsx
+```
 // bad
 ./MyComponent.js
 ./test/MyComponent.js
@@ -289,7 +289,7 @@ const Welcome = () => (
 - All component stories should have a `Default` state.
 - Put spaces in story component names for consistency with story parsing.
 
-```graphql
+```javascript
 // bad
 export default {
   title: 'pages/BrowsePage',
