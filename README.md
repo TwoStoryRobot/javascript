@@ -8,9 +8,10 @@ Thanks to [AirBNB](AirBNB) for heavily inspiring this document.
 ## How to Update This
 
 To update this document, make a pull request with your recommended changes. The
-pull request must receive a thumbs up emoji (👍) from at least half the active
-dev team prior to merging. The pull request itself can be used for discussion,
-comments, and iteration on the proposed change.
+pull request must receive **an approved review** from at least half the active
+development team prior to merging. The pull request itself can be used for 
+discussion, comments, and iteration on the proposed change. To ensure others 
+are notified, please request reviews from appropriate developers.
 
 Rules here should be 1) actionable and 2) clearly testable in a PR review.
 
