@@ -222,6 +222,46 @@ export const API_KEY = 'SOMEKEY'
 - We initialize our web applications with create-react-app.
     - Next.js and Gatsby are also acceptable.
 - Use hooks instead of other state management.
+- Use functional components over class components.
+
+```jsx
+// bad
+class Welcome extends React.Component {
+  render() {
+    const greeting = getGreeting()
+    return <h1>{greeting}</h1>
+  }
+}
+
+// good
+function Welcome() {
+  const greeting = getGreeting()
+  return <h1>{greeting}</h1>
+}
+```
+
+- Use named functions over arrow functions unless using an implicit return.
+
+```jsx
+// bad
+const Welcome = () => {
+  const greeting = getGreeting()
+  return (
+    <h1>{greeting}</h1>
+  )
+}
+
+// good
+function Welcome() {
+  const greeting = getGreeting()
+  return <h1>{greeting}</h1>
+}
+
+// good
+const Welcome = () => (
+  <h1>{getGreeting()}</h1>
+)
+```
 
 ## Component Driven Development
 
