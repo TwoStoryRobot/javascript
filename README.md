@@ -173,26 +173,6 @@ export const apiKey = 'SOMEKEY'
 export const API_KEY = 'SOMEKEY'
 ```
 
-- Use `//` for single line comments and `/* */` for multi-line comments.
-
-```javascript
-// bad
-
-// This is a very long comment that continues on and goes over multiple lines, 
-// saying something very long and detailed which all developers will appreciate 
-// reading and thinking about.
-
-/* This is just a single line comment. */
-
-// good
-
-/* This is a very long comment that continues on and goes over multiple lines, 
- * saying something very long and detailed which all developers will appreciate 
- * reading and thinking about. */
-
-// This is just a single line comment.
-```
-
 ## Filenames
 
 - Store source code in a subdirectory called `/src/`.
