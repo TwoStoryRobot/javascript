@@ -8,9 +8,10 @@ Thanks to [AirBNB](AirBNB) for heavily inspiring this document.
 ## How to Update This
 
 To update this document, make a pull request with your recommended changes. The
-pull request must receive a thumbs up emoji (👍) from at least half the active
-dev team prior to merging. The pull request itself can be used for discussion,
-comments, and iteration on the proposed change.
+pull request must receive **an approved review** from at least half the active
+development team prior to merging. The pull request itself can be used for 
+discussion, comments, and iteration on the proposed change. To ensure others 
+are notified, please request reviews from appropriate developers.
 
 Rules here should be 1) actionable and 2) clearly testable in a PR review.
 
@@ -45,7 +46,7 @@ why.
 - Use a line length of 80 characters.
 - Use camelCase when naming objects, functions, and instances.
 
-```jsx
+```javascript
 // bad
 const UsTaxes = 1000
 const playerID = 10
@@ -62,7 +63,7 @@ function getUnescoProperties() {}
 
 - Use PascalCase when naming constructors, classes, and components.
 
-```jsx
+```javascript
 // bad
 const myContainer = styled.div`
   color: blue;
@@ -76,7 +77,7 @@ const MyContainer = styled.div`
 
 - Group your shorthand properties at the end of your object declaration.
 
-```jsx
+```javascript
 const anakinSkywalker = 'Anakin Skywalker'
 const lukeSkywalker = 'Luke Skywalker'
 
@@ -106,7 +107,7 @@ const obj = {
   - An exception to this is arrow functions, which must be assigned to
     variables.
 
-```jsx
+```javascript
 // bad
 const foo = function() {
   // ...
@@ -120,7 +121,7 @@ function foo() {
 
 - Never declare functions inside blocks. This might work but is invalid JS.
 
-```jsx
+```javascript
 // bad
 if (currentUser) {
   function test() {
@@ -139,7 +140,7 @@ if (currentUser) {
 
 - Always put default parameters last.
 
-```jsx
+```javascript
 // bad
 function handleThings(opts = {}, name) {
   // ...
@@ -158,7 +159,7 @@ function handleThings(name, opts = {}) {
     UPPERCASE_VARIABLES are letting the programmer know that they can trust
     the variable (and its properties) not to change.
 
-```jsx
+```javascript
 // bad
 export const THING_TO_BE_CHANGED = 'should obviously not be uppercased'
 
@@ -183,7 +184,7 @@ export const API_KEY = 'SOMEKEY'
 - Use the `.stories.js` and `test.js` extensions for stories and tests where
   applicable.
 
-```jsx
+```
 // bad
 ./MyComponent.js
 ./test/MyComponent.js
@@ -221,6 +222,46 @@ export const API_KEY = 'SOMEKEY'
 - We initialize our web applications with create-react-app.
     - Next.js and Gatsby are also acceptable.
 - Use hooks instead of other state management.
+- Use functional components over class components.
+
+```jsx
+// bad
+class Welcome extends React.Component {
+  render() {
+    const greeting = getGreeting()
+    return <h1>{greeting}</h1>
+  }
+}
+
+// good
+function Welcome() {
+  const greeting = getGreeting()
+  return <h1>{greeting}</h1>
+}
+```
+
+- Use named functions over arrow functions unless using an implicit return.
+
+```jsx
+// bad
+const Welcome = () => {
+  const greeting = getGreeting()
+  return (
+    <h1>{greeting}</h1>
+  )
+}
+
+// good
+function Welcome() {
+  const greeting = getGreeting()
+  return <h1>{greeting}</h1>
+}
+
+// good
+const Welcome = () => (
+  <h1>{getGreeting()}</h1>
+)
+```
 
 ## Component Driven Development
 
@@ -228,7 +269,7 @@ export const API_KEY = 'SOMEKEY'
 - All component stories should have a `Default` state.
 - Put spaces in story component names for consistency with story parsing.
 
-```graphql
+```javascript
 // bad
 export default {
   title: 'pages/BrowsePage',
