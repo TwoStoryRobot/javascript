@@ -43,7 +43,6 @@ why.
 
 ## General
 
-- Use a line length of 80 characters.
 - Use camelCase when naming objects, functions, and instances.
 
 ```javascript
