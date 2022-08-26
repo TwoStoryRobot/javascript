@@ -324,7 +324,7 @@ Query {
 - Repositories should name their default branch **main**. 
   - If additional branches are needed:
     - Use a [production branch] or [environment branches] for web apps.
-    - Use [release branches] for external software (e.g. npm packages).
+    - Use [release branches] or tags for external software (e.g. npm packages).
   - **main** should be a protected branch, as well as any environment / 
     production branch. We use these settings:
     - Status checks must pass before merging.
