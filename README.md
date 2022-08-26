@@ -322,7 +322,7 @@ Query {
 - Repositories should follow [Gitlab flow].
   - Gitlab flow uses branching workflows instead of forks whenever possible.
 - Repositories should name their default branch **main**. 
-  - If additional branches are needed:
+  - If more fine tuned control is needed:
     - Use a [production branch] or [environment branches] for web apps.
     - Use [release branches] or tags for external software (e.g. npm packages).
   - **main** should be a protected branch, as well as any environment / 
