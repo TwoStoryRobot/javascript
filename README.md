@@ -315,16 +315,21 @@ Query {
 - Type names should use PascalCase.
 - Enum values should be ALL_CAPS and enum names should use PascalCase.
 
-## GitHub
+## Git Workflow
 
 - Use separate repositories for frontend and backend applications.
   - e.g.: repo-web, repo-mobile, and repo-api
-- Projects should follow Git flow, and have both a **main** and **dev**
-  branch.
-  - Open source apps or small projects can use a single **main** branch.
-- Both **dev** and **main** should be protected branches.
-  - Status checks must pass before merging.
-  - Require branches are up-to-date.
+- Repositories should follow [Gitlab flow].
+  - Gitlab flow uses branching workflows instead of forks whenever possible.
+- Repositories should name their default branch **main**. 
+  - If more fine tuned control is needed:
+    - Use a [production branch] or [environment branches] for web apps.
+    - Use [release branches] or tags for external software (e.g. npm packages).
+  - **main** should be a protected branch, as well as any environment / 
+    production branch. We use these settings:
+    - Status checks must pass before merging.
+    - Require at least one approving review.
+    - Require branches are up-to-date.
 
 ## CI / CD
 
@@ -342,3 +347,7 @@ Query {
 [jest-runner-eslint]: https://www.npmjs.com/package/jest-runner-eslint
 [is-ci-cli]: https://www.npmjs.com/package/is-ci-cli
 [testing trophy]: https://kentcdodds.com/blog/write-tests
+[Gitlab flow]: https://docs.gitlab.com/ee/topics/gitlab_flow.html
+[production branch]: https://docs.gitlab.com/ee/topics/gitlab_flow.html#production-branch-with-gitlab-flow
+[environment branches]: https://docs.gitlab.com/ee/topics/gitlab_flow.html#environment-branches-with-gitlab-flow
+[release branches]: https://docs.gitlab.com/ee/topics/gitlab_flow.html#release-branches-with-gitlab-flow
